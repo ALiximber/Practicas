@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Ejercicio 2</title>
+        <script type="text/javascript" src="Practica4.js"></script>
+        <link rel="stylesheet" src="Fondo.jpg" type="text/css">
+        <style>
+            td{
+                color: #ffffff;
+                text-align: center;
+                font-size:medium;
+            }
+            input{
+                font-size: 18px;
+                line-height: 1.428571429;
+                background-color: #24303c;
+                color: #ffffff;
+                display: block;
+                border-radius: 2px;
+                padding: 1px;
+                border: 1px solid #807270;
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 5px;
+                
+            }
+            section{
+                background-color: #24303c;
+                height: auto;
+                padding: 30px;
+                width: 500px;
+                margin: auto;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 5px;
+                box-shadow: 21px 23px 35px -14px rgba(0,0,0,0.84);
+                -webkit-box-shadow: 21px 23px 35px -14px rgba(0,0,0,0.84);
+                -moz-box-shadow: 21px 23px 35px -14px rgba(0,0,0,0.84);
+                font-family: 'calibri';
+                color: white;
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            :not(input,body,table,section,h2,body)
+            {
+                border: 1px solid black;
+            }
+            body{
+                background-image: url(Fondo.jpg);
+            }        
+            #Titulo{
+                position: absolute;
+                top: 10%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 30px;
+                border: 1px solid 24303c;
+            }
+            #jose{
+                border-color: #24303c;
+            }
+        </style>
+    </head>
+    <body onload="Tabla()">
+        <section id="Titulo">
+            <table>
+                <tr>
+                    <td id="jose">
+                        Practica_Armando
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </body>
+</html>

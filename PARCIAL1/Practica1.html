@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Mi primer página web</title>
+        <script type="text/javascript">
+
+            function Arriba(){
+                document.getElementById("cuadro").style.position="absolute";
+
+                if(parseInt(document.getElementById("cuadro").style.left)>100 && parseInt(document.getElementById("cuadro").style.top)>0){
+
+                    document.getElementById("cuadro").style.top= parseInt(document.getElementById("cuadro").style.top)-50;
+                }else if(parseInt(document.getElementById("cuadro").style.left)<=100 && parseInt(document.getElementById("cuadro").style.top)>100 ){
+                    document.getElementById("cuadro").style.top= parseInt(document.getElementById("cuadro").style.top)-50;
+                }
+            }
+            function Abajo(){
+                if(parseInt(document.getElementById("cuadro").style.top)<=800){
+                    document.getElementById("cuadro").style.top= parseInt(document.getElementById("cuadro").style.top)+50;
+                }
+            }
+            function Derecha(){
+                document.getElementById("cuadro").style.position="absolute";
+
+                if(parseInt(document.getElementById("cuadro").style.left)<600){
+                    document.getElementById("cuadro").style.left= parseInt(document.getElementById("cuadro").style.left)+50;
+                }
+            }
+            function Izquierda(){
+                document.getElementById("cuadro").style.position="absolute";
+                if(parseInt(document.getElementById("cuadro").style.top)>100 && parseInt(document.getElementById("cuadro").style.left)>0){
+                    document.getElementById("cuadro").style.left= parseInt(document.getElementById("cuadro").style.left)-50;
+                }else if(parseInt(document.getElementById("cuadro").style.left)>100 && parseInt(document.getElementById("cuadro").style.top)<100 ){
+                    document.getElementById("cuadro").style.left= parseInt(document.getElementById("cuadro").style.left)-50;
+                }
+            }
+            function Centrar(){
+                document.getElementById("cuadro").style.position="absolute"; 
+                document.getElementById("cuadro").style.left= "100px";
+                document.getElementById("cuadro").style.top= "150px";
+                document.getElementById("cuadro").style.backgroundColor = "blue";
+            }
+        </script>
+    </head>
+    <body onload="Centrar()">
+        <div>
+            <table border="0">
+                <tr>
+                    <td></td>
+                    <td><button onclick="Arriba()">^</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><button onclick="Izquierda()"><</button></td>
+                    <td><button onclick="Centrar()">O</button></td>
+                    <td><button onclick="Derecha()">></button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button onclick="Abajo()">v</button></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table  border="1" id="cuadro" width="50" HEIGHT="50">
+                <tr></tr>
+            </table>
+
+           
+        </div>
+    </body>
+
+</html>
